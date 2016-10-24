@@ -1,0 +1,152 @@
+* {
+    font-family: 'Kanit', sans-serif;
+}
+
+.container {
+  overflow: hidden;
+  background-color: #131a2d;
+  margin-top: 75px;
+  padding: 0;
+}
+
+#logo-img {
+  background: url('../images/ico.png') no-repeat;
+  width: 125px;
+  height: 125px;
+  margin: 10px 15px;
+}
+
+.navbar-header {
+  background-color: white;
+  border-bottom: 2px solid grey;
+  width: 100%;
+  padding: 0;
+}
+
+.navbar-brand h1 {
+  font-weight: bold;
+  text-transform: uppercase;
+  vertical-align: middle;
+  font-family: 'Kanit', sans-serif;
+  color: black;
+  font-size: 4em;
+  text-transform: uppercase;;
+  font-weight: bold;
+  margin: 0;
+}
+
+.navbar-brand a:hover, .navbar-brand a:focus {
+  text-decoration: none;
+}
+
+.navbar-brand h4 {
+  color: #000;
+  text-transform: uppercase;
+  text-align: right;
+}
+
+.img-responsive img {
+  width: 100%;
+}
+
+h2 {
+  padding: 20px 0 10px;
+  color: #d0c4ab;
+  clear: both;
+  margin: 0;
+}
+
+h3 {
+  text-transform: uppercase;
+}
+
+p, h3 {
+  color: #e0d3bd;
+  text-align: center;
+}
+
+.item > img {
+  width: 100%;
+}
+
+#jambotron {
+  padding: 0;
+  background-color: white;
+}
+
+#collapsable-nav {
+  width: 100%;
+}
+
+#nav-list {
+  background-color: #131a2d;
+  margin: 0 auto 15px;
+}
+
+#nav-list a {
+  color: #e0d3bd;
+  text-align: center;
+  font-size: 1.2em;
+}
+
+#nav-list a:hover, #nav-list a:focus {
+    border: none;
+    text-shadow: 0 1px 20px white;
+}
+
+#phone {
+    font-size: 1.1em;
+}
+
+@media (max-width: 767px) {
+  .container {
+    padding: 0;
+  }
+  .page h2, .page h3 {
+    font-size: 1.1em;
+  }
+  .navbar-brand {
+    font-size: .5em;
+    float: left !important;
+    padding: 5px 15px;
+  }
+  .navbar-brand h4, h1{
+    margin: 2px;
+    font-size: 1.8em;
+  }
+  .navbar-header {
+  margin: 0 !important;
+  padding: 5px;
+  }
+}
+
+@media (min-width: 768px) {
+  .navbar-brand h1 {
+    font-size: 3em;
+    padding-top: 10px;
+  }
+  #nav-list {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 970px
+    padding-top: 25px;
+  }
+  #nav-list {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+  #nav-list {
+    width: 1170px;
+  }
+}
+
+img {
+    margin-top: 15px;
+}
