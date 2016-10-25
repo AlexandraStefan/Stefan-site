@@ -6,6 +6,7 @@
     <title>Alexas</title>
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="js/script.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Kanit" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Kanit:800" rel="stylesheet">
   </head>
@@ -18,10 +19,11 @@
           <a href="index.html" class="pull-left visible-sm visible-md visible-lg">
             <div id="logo-img" alt="logo image"></div>
           </a>
-
           <div class="navbar-brand pull-right">
-            <a href="index.html"><h1>Alexa Ste&#769fan</h1><h4>Front-end Ninja</h4></a>
+          <a href="index.html"><h1>Alexa Ste&#769fan</h1>
+            <h4>Front-end Ninja</h4></a>
           </div>
+
 
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapsable-nav" aria-expanded="false">
             <span class="sr-only">Toggle navigation</span>
@@ -33,66 +35,73 @@
 
 
         <div id="collapsable-nav" class="collapse navbar-collapse">
-           <ul id="nav-list" class="nav navbar-nav navbar-fixed-top nav-tabs">
-            <li class="col-lg-3 col-md-3 col-sm-3">
+           <ul id="nav-list" class="nav navbar-nav navbar-fixed-top">
+            <li class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
               <a href="all-work.html">
                 <span class="glyphicon glyphicon-cloud"></span><br class="hidden-xs">All work</a>
             </li>
-            <li class="col-lg-3 col-md-3 col-sm-3">
+            <li class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
               <a href="about.html">
                 <span class="glyphicon glyphicon-info-sign"></span><br class="hidden-xs">About</a>
             </li>
-            <li class="col-lg-3 col-md-3 col-sm-3">
+            <li class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
               <a href="awards.html">
                 <span class="glyphicon glyphicon-star"></span><br class="hidden-xs">Awards</a>
             </li >
-            <li id="phone" class="hidden-xs col-lg-3 col-md-3 col-sm-3"">
+            <li id="phone" class="hidden-xs col-lg-3 col-md-3 col-sm-3 col-xs-12">
               <a href="tel:8-913-703-8812">
                 <span class="glyphicon glyphicon-phone"><span><br>913<nbsp>703<nbsp>88**</span></a>
             </li>
           </ul><!-- #nav-list -->
-        </div><!-- .collapse .navbar-collapse -->
-
-
-        <div class="page">
-          <div id="jambotron" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 img-responsive visible-sm visible-md visible-lg">
-          <img src="images/make-up.jpg">
-          </div>
-
-          <h2 class="col-md-12">Current Work</h2>
-
-          <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 item">
-            <img class="img-responsive" srcset="images/1.jpg">
-            <h3>Mother Superior</h3>
-            <p>С помощью этого атрибута задается альтернативный текст для изображения. Он будет показан вместо изображения, если URL изображения неправилен, формат изображения не поддерживается, или если оно ещё не загружено.</p>
-            <p><a href="http://github.com"><img src="images/Github-PNG-Image.png"></a></p>
-          </div>
-          <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 item">
-            <img class="img-responsive" srcset="images/2.jpg">
-            <h3>Drop the Gun</h3>
-            <p>Обязательный атрибут, в котором указывается URL файла изображения. В браузерах, поддерживающих элемент srcset, src используется как изображение-кандидат с a pixel density descriptor 1x, если в srcset не определено изображения с таким pixel density descriptor и srcset не содержит «w»-дескрипторов.</p>
-            <p><a href="http://github.com"><img src="images/Github-PNG-Image.png"></a></p>
-          </div>
-          <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 item">
-            <img class="img-responsive" srcset="images/3.jpg">
-            <h3>When I feel my finger on&nbspyour trigger</h3>
-            <p>Перед загрузкой изображения выполняется cross-origin запрос (Origin: HTTP header) с указанием параметров доступа (в виде cookie, сертификата или пары логин/пароль). В ответе сервера должен присутствовать заголовок Access-Control-Allow-Origin: HTTP header, иначе использование изображения в &ltcanvas&gt ограничивается.</p>
-            <p><a href="http://github.com"><img src="images/Github-PNG-Image.png"></a></p>
-          </div>
-          <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 item">
-            <img class="img-responsive" srcset="images/4.jpg">
-            <h3>&quotA warm gun&quot</h3>
-            <p>Этот enumerated атрибут определяет, используется ли CORS при загрузке изображения. Изображения, загруженные с помощью CORS, могут использоваться в элементах &ltcanvas&gt, не ограничивая функциональность последних (англ. tainted canvas).<br>Source size values specify the intended display size of the image. User agents use the current source size to select one of the sources supplied by the srcset attribute, when those sources are described using width ('w') descriptors.</p>
-            <p><a href="http://github.com"><img src="images/Github-PNG-Image.png" viewport ></a></p>
-          </div>
-        </div><!--div.page-->
+        </div><!-- #collapsable-nav -->
       </div><!--div.container-->
     </nav>
   </header>
+
+  <div id="page" class="container">
+
+    <div id="call" class="visible-xs">
+    <a class="btn" href="tel:89137038812"><span class="glyphicon glyphicon-phone-alt"></span>913-703-88**</a>
+    </div>
+    <p class="text-center visible-xs">* Working hours only!</p>
+
+    <div class="jumbotron img-responsive visible-sm visible-md visible-lg">
+      <img src="images/make-up.jpg" alt="Make-up picture">
+    </div>
+
+    <h2 class="col-md-12">Current Work</h2>
+
+    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 item">
+            <img class="img-responsive" srcset="images/1.jpg" alt="Image1">
+            <h3>Mother Superior</h3>
+            <p>С помощью этого атрибута задается альтернативный текст для изображения. Он будет показан вместо изображения, если URL изображения неправилен, формат изображения не поддерживается, или если оно ещё не загружено.</p>
+            <p><a href="http://github.com"><img src="images/Github-PNG-Image.png"></a></p>
+    </div>
+    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 item">
+            <img class="img-responsive" srcset="images/2.jpg" alt="Image2">
+            <h3>Drop the Gun</h3>
+            <p>Обязательный атрибут, в котором указывается URL файла изображения. В браузерах, поддерживающих элемент srcset, src используется как изображение-кандидат с a pixel density descriptor 1x, если в srcset не определено изображения с таким pixel density descriptor и srcset не содержит «w»-дескрипторов.</p>
+            <p><a href="http://github.com"><img src="images/Github-PNG-Image.png"></a></p>
+    </div>
+    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 item">
+            <img class="img-responsive" srcset="images/3.jpg" alt="Image3">
+            <h3>When I feel my finger on&nbspyour trigger</h3>
+            <p>Перед загрузкой изображения выполняется cross-origin запрос (Origin: HTTP header) с указанием параметров доступа (в виде cookie, сертификата или пары логин/пароль). В ответе сервера должен присутствовать заголовок Access-Control-Allow-Origin: HTTP header, иначе использование изображения в &ltcanvas&gt ограничивается.</p>
+            <p><a href="http://github.com"><img src="images/Github-PNG-Image.png"></a></p>
+    </div>
+    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 item">
+            <img class="img-responsive" srcset="images/4.jpg" alt="Image4">
+            <h3>&quotA warm gun&quot</h3>
+            <p>Этот enumerated атрибут определяет, используется ли CORS при загрузке изображения. Изображения, загруженные с помощью CORS, могут использоваться в элементах &ltcanvas&gt, не ограничивая функциональность последних (англ. tainted canvas).<br>Source size values specify the intended display size of the image. User agents use the current source size to select one of the sources supplied by the srcset attribute, when those sources are described using width ('w') descriptors.</p>
+            <p><a href="http://github.com"><img src="images/Github-PNG-Image.png" viewport ></a></p>
+    </div>
+  </div><!--div#page-->
+
 
   <!-- jQuery (Bootstrap JS plugins depend on it) -->
   <script src="js/jquery-2.1.4.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
   <script src="js/script.js"></script>
 
-</body></html>
+</body>
+</html>
