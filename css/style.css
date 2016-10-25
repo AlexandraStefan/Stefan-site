@@ -78,6 +78,7 @@ div.jumbotron {
   background-color: white;
   border-radius: 0;
 }
+
 .img-responsive img {
   width: 100%;
 }
@@ -110,6 +111,7 @@ p, h3 {
   margin: 0 auto;
   height: 75px;
   border-bottom: 1px solid #e0d3bd;
+
 }
 
 #nav-list a {
@@ -246,3 +248,4 @@ a.btn {
     font-size: 4.8em;
   }
 }
+
