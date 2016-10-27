@@ -10,7 +10,7 @@
 
 /***headline table***/
 nav#header-nav {
-    border-radius: 0;
+  border-radius: 0;
   border: none;
   width: 100%;
   margin: 75px 0 0;
@@ -102,7 +102,6 @@ nav#header-nav {
 a.btn {
     font-size: 2.1em;
     color: #000;
-    text-align: center;
     display: block;
 }
 .btn span {
@@ -134,6 +133,10 @@ a.btn {
   width: 100%;
 }
 
+.gh-ico {
+  margin-bottom: 15px;
+}
+
 
 /***Sub-headlines***/
 h2 {
@@ -158,11 +161,10 @@ div > #page {
 
 /***i-frame map***/
 #map-tile {
-  border-top: 1px dotted #313131;
   width: 100%;
   position: relative;
   overflow: hidden;
-  margin: 15px 0;
+  margin: 40px 0;
   padding-top: 15px;
 }
 #map-tile span {
@@ -172,13 +174,150 @@ div > #page {
   width: 100%;
   text-align: center;
   font-size: 1.7em;
-  background-color: rgba(19,26,45,.8);
+  background-color: rgba(19,26,45,.75);
   color: #e0d3bd;
   line-height: 1.6;
 }
 
-/***mobile***/
-@media (max-width: 767px) {
+/*******************All work******************/
+.works {
+  position: relative;
+  overflow: hidden;
+  width: 200px;
+  height: 200px;
+  margin: 15px auto;
+}
+.works > span {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  font-size: 1.2em;
+  background-color: rgba(19,26,45,.75);
+  color: #e0d3bd;
+  line-height: 1.6;
+}
+.works:hover, .works:focus {
+  box-shadow: 0 0 15px #ffffff;
+  box-sizing: 1.1;
+}
+
+/*******************END All work******************/
+
+/***Footer***/
+footer.panel-footer {
+  padding: 0;
+  margin: 0;
+  border: none;
+  color: #e0d3bd;
+}
+.panel-footer > div.container {
+  background-color: #37383a;
+}
+
+.panel-footer > div.container > div {
+  padding-top: 15px;
+}
+
+h6 {
+  font-size: 1.3em;
+}
+
+footer .container div > a {
+  padding-bottom: 15px;
+  padding-left: 30px;
+  display: inline-block;
+  text-align: center;
+  color: #e0d3bd;
+  font-size: 1em;
+}
+
+footer div a:hover, footer div a:focus {
+  text-decoration: none;
+  text-shadow: 0 1px 13px #ffffff;
+  color: #ece2cf;
+}
+
+footer a > img {
+  height: 30px;
+  width: 30px;
+  margin-right: 7px;
+}
+
+/***horizontal rules***/
+hr {
+  margin: 0;
+  border: 0;
+  border-bottom: 1px dotted #313131;
+  background: #313131;
+}
+footer hr {
+  margin: 0;
+  border: 0;
+  border-bottom: 1px dotted #131a2d;
+}
+#feedback p {
+  font-style: italic;
+  font-size: 1.1em;
+}
+#feedback p:nth-child(2) {
+  margin-top: 30px;
+}
+
+div.copyright {
+  padding: 15px;
+  color: #131a2d;
+  font-size: 1.3em;
+}
+
+/***mobile - xxs***/
+@media (max-width: 479px) {
+  #header-nav.navbar {
+    clear: both;
+    height: 60px;
+    margin: 0;
+  }
+  .col-xxs-12 {
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+    float: left;
+    width: 100%;
+  }
+  .navbar-brand {
+    float: left !important;
+    padding: 0;
+  }
+  .navbar-brand h1{
+    font-size: 1.8em;
+    line-height: 1.1;
+  }
+  .navbar-brand h4 {
+    font-size: .7em;
+    margin: 0;
+  }
+  #nav-list {
+    height: initial;
+    margin: 65px 0 0;
+    border-bottom: 1px dotted #e0d3bd;
+  }
+  h2 {
+    font-size: 1.4em;
+  }
+  .works {
+    position: relative;
+    overflow: hidden;
+    width: 280px;
+    margin: 0 auto 15px;
+  }
+  div.copyright {
+    font-size: 4vw;
+  }
+}
+
+/***mobile - xs***/
+@media (min-width: 480px) and (max-width: 767px) {
   #header-nav.navbar {
     clear: both;
     height: 60px;
@@ -189,8 +328,8 @@ div > #page {
     padding: 0;
   }
   .navbar-brand h1{
-    font-size: 1.5em;
-    line-height: 1.4;
+    font-size: 1.9em;
+    line-height: 1.1;
   }
   .navbar-brand h4 {
     font-size: .7em;
@@ -200,6 +339,9 @@ div > #page {
     height: initial;
     margin: 65px 0 0;
     border-bottom: 1px dotted #e0d3bd;
+  }
+  h2 {
+    font-size: 1.7em;
   }
 }
 
