@@ -8,7 +8,7 @@
   background-color: #131a2d;
 }
 
-/***headline table***/
+/*****************HEADER********************/
 nav#header-nav {
   border-radius: 0;
   border: none;
@@ -21,7 +21,7 @@ nav#header-nav {
   padding: 5px 15px;
 }
 
-/***headline***/
+/***Brand***/
 .navbar-brand {
   padding: 1.2% 0;
   vertical-align: middle;
@@ -47,31 +47,33 @@ nav#header-nav {
   text-align: right;
 }
 
-/***navigation menu***/
-#nav-list {
+/***Dropdown navigation***/
+#collapsable-nav {
+  z-index: 1090;
+  position: fixed;
   background-color: #131a2d;
-  margin: 0 auto;
   height: 75px;
   border-bottom: 1px solid #e0d3bd;
+  margin: 0 auto;
 }
-
+#nav-list {
+  width: 100%;
+}
 #nav-list a {
   color: #e0d3bd;
   text-align: center;
   font-size: 1.2em;
 }
-
 #nav-list a > span {
   margin-right: 6px;
 }
-
 #nav-list a:hover, #nav-list a:focus {
   border: none;
   text-shadow: 0 1px 13px #ffffff;
   color: #ece2cf;
 }
 
-/***button***/
+/***Menu button***/
 .navbar-header > button {
   margin: 6px 0;
   padding: 10px;
@@ -82,12 +84,14 @@ nav#header-nav {
 .navbar-toggle .icon-bar + .icon-bar {
   margin-top: 6px;
 }
-.navbar-header button.navbar-toggle, .navbar-header .icom-bar {
+.navbar-header button.navbar-toggle, .navbar-header .icon-bar {
   box-shadow: inset 0 0 10px #131a2d;
 }
 .navbar-header button.navbar-toggle:hover {
   background-color: #e0d3bd;
 }
+
+/*************END - HEADER********************/
 
 /***Phone button***/
 #phone {
@@ -112,6 +116,8 @@ a.btn {
   background-color: #e0d3bd;
 }
 
+/****************Main Page******************/
+
 /***Working hours***/
 #page > p {
   font-style: italic;
@@ -120,25 +126,6 @@ a.btn {
   padding-bottom: 18px;
 }
 
-/***Main content***/
-
-/***jumbotron***/
-.container div.jumbotron {
-  background-color: #ffffff;
-  padding: 15px 0 0;
-  margin: 0;
-  border-radius: 0;
-}
-.img-responsive img {
-  width: 100%;
-}
-
-.gh-ico {
-  margin-bottom: 15px;
-}
-
-
-/***Sub-headlines***/
 h2 {
   padding: 20px 0;
   color: #d0c4ab;
@@ -159,6 +146,23 @@ div > #page {
   margin: 15px;
 }
 
+/***jumbotron***/
+.container div.jumbotron {
+  background-color: #ffffff;
+  padding: 15px 0 0;
+  margin: 0;
+  border-radius: 0;
+}
+.img-responsive img {
+  width: 100%;
+}
+
+.gh-ico {
+  margin-bottom: 15px;
+}
+
+/************END - Main Page*****************/
+
 /***i-frame map***/
 #map-tile {
   width: 100%;
@@ -177,6 +181,19 @@ div > #page {
   background-color: rgba(19,26,45,.75);
   color: #e0d3bd;
   line-height: 1.6;
+}
+
+/***horizontal rules***/
+hr {
+  margin: 0;
+  border: 0;
+  border-bottom: 1px dotted #313131;
+  background: #313131;
+}
+footer hr {
+  margin: 0;
+  border: 0;
+  border-bottom: 1px dotted #131a2d;
 }
 
 /*******************All work******************/
@@ -201,10 +218,9 @@ div > #page {
   box-shadow: 0 0 15px #ffffff;
   box-sizing: 1.1;
 }
-
 /*******************END All work******************/
 
-/***Footer***/
+/*******************Footer************************/
 footer.panel-footer {
   padding: 0;
   margin: 0;
@@ -214,15 +230,12 @@ footer.panel-footer {
 .panel-footer > div.container {
   background-color: #37383a;
 }
-
 .panel-footer > div.container > div {
   padding-top: 15px;
 }
-
 h6 {
   font-size: 1.3em;
 }
-
 footer .container div > a {
   padding-bottom: 15px;
   padding-left: 30px;
@@ -231,30 +244,15 @@ footer .container div > a {
   color: #e0d3bd;
   font-size: 1em;
 }
-
 footer div a:hover, footer div a:focus {
   text-decoration: none;
   text-shadow: 0 1px 13px #ffffff;
   color: #ece2cf;
 }
-
 footer a > img {
-  height: 30px;
-  width: 30px;
+  height: 25px;
+  width: 25px;
   margin-right: 7px;
-}
-
-/***horizontal rules***/
-hr {
-  margin: 0;
-  border: 0;
-  border-bottom: 1px dotted #313131;
-  background: #313131;
-}
-footer hr {
-  margin: 0;
-  border: 0;
-  border-bottom: 1px dotted #131a2d;
 }
 #feedback p {
   font-style: italic;
@@ -263,13 +261,14 @@ footer hr {
 #feedback p:nth-child(2) {
   margin-top: 30px;
 }
-
 div.copyright {
   padding: 15px;
   color: #131a2d;
   font-size: 1.3em;
 }
+/***************END - Footer*******************/
 
+/*************MEDIA QUERIES*************/
 /***mobile - xxs***/
 @media (max-width: 479px) {
   #header-nav.navbar {
@@ -290,17 +289,18 @@ div.copyright {
     padding: 0;
   }
   .navbar-brand h1{
-    font-size: 1.8em;
+    font-size: 1.7em;
     line-height: 1.1;
   }
   .navbar-brand h4 {
-    font-size: .7em;
+    font-size: .65em;
     margin: 0;
   }
-  #nav-list {
+  #collapsable-nav {
     height: initial;
-    margin: 65px 0 0;
     border-bottom: 1px dotted #e0d3bd;
+    width: 100%;
+    top: 60px;
   }
   h2 {
     font-size: 1.4em;
@@ -328,17 +328,18 @@ div.copyright {
     padding: 0;
   }
   .navbar-brand h1{
-    font-size: 1.9em;
+    font-size: 1.8em;
     line-height: 1.1;
   }
   .navbar-brand h4 {
     font-size: .7em;
     margin: 0;
   }
-  #nav-list {
+  #collapsable-nav {
     height: initial;
-    margin: 65px 0 0;
     border-bottom: 1px dotted #e0d3bd;
+    width: 100%;
+    top: 60px;
   }
   h2 {
     font-size: 1.7em;
@@ -353,22 +354,23 @@ div.copyright {
   .navbar-brand h4 {
     font-size: .85em;
   }
-  nav, #nav-list {
+  nav, #collapsable-nav {
     width: 750px;
-    margin: auto;
   }
   #logo-img {
-  background: url('../images/ico-small.png') no-repeat;
-  width: 94px;
-  height: 88px;
+    background: url('../images/ico-small.png') no-repeat;
+    width: 94px;
+    height: 88px;
+  }
+  #collapsable-nav {
+    top: 0 !important;
   }
 }
 
 /***medium***/
 @media (min-width: 992px) and (max-width: 1199px) {
-  nav, #nav-list {
+  nav, #collapsable-nav {
     width: 970px;
-    margin: auto;
   }
   #logo-img {
     background: url('../images/ico.png') no-repeat;
@@ -379,13 +381,15 @@ div.copyright {
     font-size: 4.2em;
     margin: 0;
   }
+  #collapsable-nav {
+    top: 0 !important;
+  }
 }
 
 /***large***/
 @media (min-width: 1200px) {
-  nav, #nav-list {
+  nav, #collapsable-nav {
     width: 1170px;
-    margin: auto;
   }
   #logo-img {
     background: url('../images/ico.png') no-repeat;
@@ -398,5 +402,8 @@ div.copyright {
   .navbar-brand h1 {
     font-size: 4.8em;
   }
+  #collapsable-nav {
+    top: 0 !important;
+  }
 }
-
+/*************END - Media Queries*************/
