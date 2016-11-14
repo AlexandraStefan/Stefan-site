@@ -23,42 +23,109 @@ $('#text').click(function() {
 })
 
 
-//$(document).ready(function() {
+$(document).ready(function() {
+  $('#text').mousemove(function() {
+    $('#up-btn').fadeIn();
 
-//  $(window).scroll(function(){
-//    var _scroll = $(window).scrollTop();
+  var timer = setTimeout(notMouseMove, 4000);
+  clearTimeout(timer);
+  timer = setTimeout(notMouseMove, 4000);
+  });
 
-//    if ($(this).scrollTop(_scroll) > 600 && $(this).scrollTop(_scroll) < 1200) {
-//      $('#up-btn').css({"visibility": visible});
-//    }
-//    else {
-//      if ($(this).scrollTop(_scroll) >= 1200 && $(this).scrollTop(_scroll) < 1500) {
-//        $('#up-btn').addClass('cd-fade-out');
-//      }
-//      else {
-//        $('#up-btn').css({"visibility": hidden});
-//      }
-//    }
-//  });
+  function notMouseMove() {
+    $('#up-btn').fadeOut();
+  }
+});
 
-//  //smooth scroll to top
-//  $('#up-btn').on('click', function(event){
-//    event.preventDefault();
-//    $('body,html').animate( {
-//      scrollTop: 0,
-//      },
-//      700);
-//  });
+$('#up-btn').click(function () {
+  $("html, body").animate({
+    scrollTop: 0
+    }, 600);
+    return false;
+});
 
-//});
 
-//var $toTop = $('#up-btn');
-//var _scroll = document.documentElement.scrollTop = document.body.scrollTop;
+var tvPause = false;
+var tvStop = false;
+var tvItems = $('.jumbotron .jumbo-item');
+                       //    var tvDots = $(".dots a")
 
-//$(window).scroll(function () {
-//    if (_scroll > 600) {
-//        $toTop.css({"visibility": visible});
-//    } else if ($toTop.is(':visible')) {
-//        $toTop.css({"visibility": hidden});
-//    }
-//});
+$(document).ready(function () {
+
+  try {
+
+    var tvRotator = {
+      initialFadeIn: 1000,
+      itemInterval: 5000,
+      fadeTime: 1000,
+      numberOfItems: tvItems.length,
+
+      currentItem: 0,
+      nextItem: 1,
+
+                         //     currentDot: 0,
+                          //    nextDot: 1,
+
+      iteration: 0,
+      iterationsMax: tvItems.length-1,
+
+      init: function() {
+
+        tvItems.eq(this.currentItem).fadeIn(this.initialFadeIn);
+
+        tvPause = true;
+        setTimeout(function(){tvPause = false}, 15000);
+
+        setInterval(function(){
+          if (!tvPause && !tvStop) {
+            tvRotator.showHide();
+            if (tvRotator.iteration++ >= tvRotator.iterationsMax) tvStop = true;
+          }
+        }, this.itemInterval);
+      },
+
+      showHide: function() {
+        if (tvStop && this.nextItem == this.currentItem) return;
+
+        tvItems.eq(this.currentItem).fadeOut(this.fadeTime);
+
+        if (!tvStop) {
+          if(this.currentItem == this.numberOfItems -1){
+            this.nextItem = 0;
+          } else {
+            this.nextItem = this.currentItem+1;
+          }
+        }
+
+        tvItems.eq(this.nextItem).fadeIn(this.fadeTime);
+        this.currentItem = this.nextItem;
+      }
+
+    };
+
+    tvRotator.init();
+
+    $('.container .jumbotron').mouseover(function(){tvPause = true});
+    $('.container .jumbotron').mouseout(function(){tvPause = false});
+
+    $('.controls a').click(function(e){
+      tvStop = true;
+      if ($(this).hasClass('prev')) {
+        tvRotator.nextItem = (tvRotator.currentItem <= 0 ? tvRotator.numberOfItems-1 : tvRotator.currentItem-1);
+      } else if ($(this).hasClass('next')) {
+        tvRotator.nextItem = (tvRotator.currentItem >= tvRotator.numberOfItems-1 ? 0 : tvRotator.currentItem+1);
+      }
+      tvRotator.showHide();
+      e.preventDefault();
+    });
+
+    $('.controls .dots a').click(function(e){
+      tvStop = true;
+      tvRotator.nextItem = parseInt($(this).attr('class'), 10);
+      tvRotator.showHide();
+      e.preventDefault();
+    });
+
+  } catch(e) {}
+
+});
