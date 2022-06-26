@@ -1,2 +1,2 @@
-# Ninja-site
+# Stefan-site
 Bootstrap
