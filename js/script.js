@@ -98,6 +98,7 @@ $(document).ready(function () {
 
         tvItems.eq(this.nextItem).fadeIn(this.fadeTime);
         this.currentItem = this.nextItem;
+        alert("this.currentItem =" + this.currentItem);
       }
 
     };
