@@ -27,14 +27,14 @@ $(document).ready(function() {
   $('#text').mousemove(function() {
     $('#up-btn').fadeIn();
   });
-<!--  var timer = setTimeout(notMouseMove, 4000);
+  var timer = setTimeout(notMouseMove, 4000);
   clearTimeout(timer);
   timer = setTimeout(notMouseMove, 4000);
   });
 
   function notMouseMove() {
     $('#up-btn').fadeOut();
-  }; -->
+  };
 
 $('#up-btn').click(function () {
   $("html, body").animate({
