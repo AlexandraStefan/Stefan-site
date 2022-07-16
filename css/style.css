@@ -167,11 +167,10 @@ div > #page {
   top: 0;
   left: 0;
   width: 100%;
-/***display: none;***/
 }
-/*.current_jumbo-item {
+.current_jumbo-item {
   display: block;
-}*/
+}
 .controls a {
   display: none;
   font-size: 3em;
