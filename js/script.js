@@ -106,7 +106,8 @@ $(document).ready(function () {
 
     tvRotator.init();
 
-    $('.container .jumbotron').mouseover(function(){tvPause = true});
+    $('.container .jumbotron').mouseover(function(){tvPause = true;
+                                                   alert("mouseover");});
     $('.container .jumbotron').mouseout(function(){tvPause = false});
 
     $('.controls a').click(function(e){
