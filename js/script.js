@@ -110,6 +110,7 @@ $(document).ready(function () {
     $('.container .jumbotron').mouseout(function(){tvPause = false});
 
     $('.controls a').click(function(e){
+      alert("this.currentItem =" + this.currentItem);
       tvStop = true;
       if ($(this).hasClass('prev')) {
         tvRotator.nextItem = (tvRotator.currentItem <= 0 ? tvRotator.numberOfItems-1 : tvRotator.currentItem-1);
