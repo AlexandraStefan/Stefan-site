@@ -84,7 +84,6 @@ $(document).ready(function () {
       },
 
       showHide: function() {
-         alert("showHide");
         if (tvStop && this.nextItem == this.currentItem) return;
 
         tvItems.eq(this.currentItem).fadeOut(this.fadeTime);
@@ -110,7 +109,6 @@ $(document).ready(function () {
     $('.container .jumbotron').mouseout(function(){tvPause = false});
 
     $('.controls a').click(function(e){
-      alert("click");
       tvStop = true;
       if ($(this).hasClass('prev')) {
         tvRotator.nextItem = (tvRotator.currentItem <= 0 ? tvRotator.numberOfItems-1 : tvRotator.currentItem-1);
