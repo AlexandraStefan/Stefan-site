@@ -84,6 +84,7 @@ $(document).ready(function () {
       },
 
       showHide: function() {
+         alert("this.currentItem =" + this.currentItem);
         if (tvStop && this.nextItem == this.currentItem) return;
 
         tvItems.eq(this.currentItem).fadeOut(this.fadeTime);
